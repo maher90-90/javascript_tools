@@ -29,11 +29,17 @@ class ImageViewer{
         this.closeBtn               = this.close_btn_element();
         this.nextBtn                = this.next_btn_element();
         this.prevBtn                = this.prev_btn_element();
+        this.before_callback        = this.options.before_callback || false;
+        if("function" === typeof this.before_callback){
+            
+            this.before_callback();
+        }
         this.init();
     }
 
     init(){
         let _that = this;
+        
         this.outerWrapper.append( this.closeBtn );
         this.closeBtn.addEventListener( 'click', function(){
             _that.outerWrapper.remove();
