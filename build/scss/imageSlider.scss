@@ -1,0 +1,48 @@
+[class$="_image_slider_wrapper_element"]{
+
+    display: flex;
+    flex-direction: row;
+    position: relative; 
+
+    [class$="_images_slider_outer_wrapper_element"]{
+
+        position: relative;
+        overflow: hidden;
+        [class$="_images_slider_inner_wrapper_element"]{
+
+            @include transition(all 400ms linear); 
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            position: absolute;
+            left: 0px;
+            [class$="_image_slider_image_element"]{
+                
+            }
+
+        }
+        
+    }
+
+    %btn_style_shared{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 34px;
+        cursor: pointer;
+        font-weight: bolder;
+        color: white;
+    }
+
+    [class$="_images_slider_prev_btn"]{
+        @extend %btn_style_shared;
+        margin-right: 10px;
+    }
+
+    [class$="_images_slider_next_btn"]{
+        @extend %btn_style_shared;
+        margin-left: 10px;
+    }
+
+}
