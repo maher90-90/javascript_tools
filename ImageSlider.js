@@ -155,7 +155,6 @@ class ImageSlider{
         let image_shift = this.images_shift;
         let limit_reached = false;
         let move_piece = this.move_piece;
-
         if(!prev){
             limit_reached = false;
             if(temp_last + image_shift <= this.images.length){
@@ -192,58 +191,12 @@ class ImageSlider{
     }
 
     move_left(){
-        /*
-        let temp_last = this.last_image_index_per_shift;
-        let image_shift = this.images_shift;
-        let first_reached = false;
-        let move_piece = 1;
-
-        if(temp_last - image_shift > this.pics_per_row){
-            this.last_image_index_per_shift = this.last_image_index_per_shift - this.images_shift;
-            move_piece = (this.image_width + this.image_margin * 2) * this.images_shift;
-        }else if (temp_last - image_shift < this.pics_per_row){
-            while(temp_last - image_shift < this.pics_per_row){
-                image_shift--;
-            }
-            this.last_image_index_per_shift = this.pics_per_row;
-        }else if (temp_last - image_shift == this.pics_per_row){
-            first_reached = true;
-        }
-
-        if(!first_reached){
-            move_piece = (this.image_width + this.image_margin * 2 ) * image_shift;
-        }else{
-            return;
-        }
-        
-       */
         this.current_left = this.current_left - this.update_move_piece(true);
         this.innerWrapper.style.left = '-' + this.current_left + 'px';
     }
 
     move_right() {
-        /*
-        let temp_last = this.last_image_index_per_shift;
-        let image_shift = this.images_shift;
-        let last_reached = false;
-        let move_piece = 1;
-        if(temp_last + image_shift < this.images.length){
-            this.last_image_index_per_shift = this.last_image_index_per_shift + this.images_shift;
-            move_piece = (this.image_width + this.image_margin * 2 ) * this.images_shift;
-
-        }else if(temp_last + image_shift > this.images.length){
-            while(temp_last + image_shift > this.images.length){
-                image_shift--;
-            }
-            this.last_image_index_per_shift = this.last_image_index_per_shift + image_shift;
-        }else if(temp_last + image_shift == this.images.length){
-            last_reached = true;            
-        }
-        if(last_reached) return;        
-        move_piece = (this.image_width + this.image_margin * 2 ) * image_shift;
-        */
         this.current_left = this.current_left + this.update_move_piece();
-        console.log(this.last_image_index_per_shift);
         this.innerWrapper.style.left = '-' + this.current_left + 'px';
     }
 
