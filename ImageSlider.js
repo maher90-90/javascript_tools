@@ -148,6 +148,9 @@ class ImageSlider{
             img_clone.style.width     = _that.image_width + 'px';
             img_clone.style.height    = _that.image_height + 'px';
             img_clone.setAttribute('data-index', index);
+            if(img.getAttribute('data-title')){
+                img_clone.setAttribute('data-title', img.getAttribute('data-title'));
+            }
             img_clone.addEventListener( 'click', function(){
                 _that.current_index = this.getAttribute('data-index');
                 if("function" === typeof _that.image_click_callback){

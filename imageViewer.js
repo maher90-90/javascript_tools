@@ -29,6 +29,7 @@ class ImageViewer{
         this.closeBtn               = this.close_btn_element();
         this.nextBtn                = this.next_btn_element();
         this.prevBtn                = this.prev_btn_element();
+        this.title                  = "";
         this.before_callback        = this.options.before_callback || false;
         if("function" === typeof this.before_callback){
             
@@ -53,6 +54,9 @@ class ImageViewer{
 
             dotEle.classList.add(dotEleCssClass);
             dotEle.setAttribute('data-index', index);
+            if(imgEle.getAttribute('data-title')){
+                imgClone.setAttribute('data-title', imgEle.getAttribute('data-title'));
+            }
             dotEle.addEventListener( 'click', function(){
                     _that.set_current_index.call( _that, this.getAttribute( 'data-index' ) );
                     _that.showSlide( _that.current_index );
@@ -155,9 +159,14 @@ class ImageViewer{
         for( let i = 0 ; i < this.images.length; i++ ){
             this.images[i].style.display = 'none';
             this.dotsWrapper.children[i].classList.remove('active');
+            
         }
- 
+        
         this.images[n].style.display = 'block';
+        if(this.images[n].getAttribute('data-title')){
+            this.title =  this.images[n].getAttribute('data-title');
+            this.headerElement.innerHTML = this.title;
+        }
         this.dotsWrapper.children[n].classList.add('active');
     }
 
