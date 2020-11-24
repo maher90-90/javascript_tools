@@ -154,9 +154,11 @@ class ImageViewer{
     showSlide( n ){
         for( let i = 0 ; i < this.images.length; i++ ){
             this.images[i].style.display = 'none';
+            this.dotsWrapper.children[i].classList.remove('active');
         }
  
         this.images[n].style.display = 'block';
+        this.dotsWrapper.children[n].classList.add('active');
     }
 
 
