@@ -87,6 +87,16 @@ class ImageSlider{
     }
 
 
+    optimize_images(){
+        if(window && window.innerWidth){
+            switch(window.innerWidth){
+                case window.innerWidth < 450:
+                    this.image_width = 97;
+                    this.image_height = 87;
+                    break;
+            }
+        }
+    }
     previous_btn_element(){
         let ele             = document.createElement( 'span' );
         let cssClass        = this.prefix + '_images_slider_prev_btn';

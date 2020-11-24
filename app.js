@@ -23,6 +23,11 @@ function runfunc(imgs){
         prefix: 'vitavia',
         image_click_callback: function(index){
             return new ImageViewer(this.images, {
+                before_callback: function() {
+                    this.images.forEach(function(img){
+                        img.src = img.src.replace('-400x270.jpg', '.jpg')
+                    })
+                },
                 current_index: index
             })
         }
