@@ -1,0 +1,11 @@
+.vitavia_zubehoergruppen_quermenu_element_slider_element_element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+$base-color: #022;
+@for $i from 1 through 5 {
+    .vitavia_zubehoergruppen_quermenu_element_slider_element_element:nth-child(3n + #{$i}) {
+      background-color: lighten($base-color, $i * 5%);
+    }
+  }

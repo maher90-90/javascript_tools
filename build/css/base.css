@@ -1,1 +1,139 @@
+[class$=element_slider_wrapper_element] {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+[class$=element_slider_wrapper_element] [class$=elements_slider_outer_wrapper_element] {
+  position: relative;
+  overflow: hidden;
+}
+[class$=element_slider_wrapper_element] [class$=elements_slider_outer_wrapper_element] [class$=elements_slider_inner_wrapper_element] {
+  -webkit-transition: all 400ms linear;
+  -moz-transition: all 400ms linear;
+  -o-transition: all 400ms linear;
+  transition: all 400ms linear;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  position: absolute;
+  left: 0px;
+}
+[class$=element_slider_wrapper_element] [class$=elements_slider_next_btn], [class$=element_slider_wrapper_element] [class$=elements_slider_prev_btn] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  cursor: pointer;
+  font-weight: bolder;
+  color: white;
+}
+[class$=element_slider_wrapper_element] [class$=elements_slider_prev_btn] {
+  margin-right: 10px;
+}
+[class$=element_slider_wrapper_element] [class$=elements_slider_next_btn] {
+  margin-left: 10px;
+}
+
+[class$=_image_viewer_outer_wrapper] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+}
+[class$=_image_viewer_outer_wrapper] [class$=_image_viewer_close_btn] {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 999;
+}
+[class$=_image_viewer_outer_wrapper] [class$=_image_viewer_inner_wrapper] {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+[class$=_image_viewer_outer_wrapper] [class$=_image_viewer_inner_wrapper] [class$=_image_viewer_header] {
+  display: block;
+}
+[class$=_image_viewer_outer_wrapper] [class$=_image_viewer_inner_wrapper] [class$=_image_viewer_content] [class$=_image_viewer_images_wrapper] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+[class$=_image_viewer_outer_wrapper] [class$=_image_viewer_inner_wrapper] [class$=_image_viewer_content] [class$=_image_viewer_images_wrapper] [class$=_image_viewer_image_element] {
+  width: unset;
+  display: none;
+  width: 60%;
+  height: auto;
+  max-height: 60vh;
+}
+[class$=_image_viewer_outer_wrapper] [class$=_image_viewer_inner_wrapper] [class$=_image_viewer_footer] {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 2%;
+}
+[class$=_image_viewer_outer_wrapper] [class$=_image_viewer_inner_wrapper] [class$=_image_viewer_footer] [class$=_image_viewer_dots_wrapper] {
+  display: flex;
+  flex-direction: row;
+}
+[class$=_image_viewer_outer_wrapper] [class$=_image_viewer_inner_wrapper] [class$=_image_viewer_footer] [class$=_image_viewer_dots_wrapper] [class$=_image_viewer_dot_element] {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  margin: 4px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+[class$=_image_viewer_outer_wrapper] [class$=_image_viewer_inner_wrapper] [class$=_image_viewer_footer] [class$=_image_viewer_next_btn], [class$=_image_viewer_outer_wrapper] [class$=_image_viewer_inner_wrapper] [class$=_image_viewer_footer] [class$=_image_viewer_prev_btn] {
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+[class$=_image_viewer_outer_wrapper] [class$=_image_viewer_inner_wrapper] [class$=_image_viewer_footer] [class$=_image_viewer_next_btn] {
+  margin-left: 13px;
+}
+[class$=_image_viewer_outer_wrapper] [class$=_image_viewer_inner_wrapper] [class$=_image_viewer_footer] [class$=_image_viewer_prev_btn] {
+  margin-right: 13px;
+}
+
+.vitavia_zubehoergruppen_quermenu_element_slider_element_element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vitavia_zubehoergruppen_quermenu_element_slider_element_element:nth-child(3n+1) {
+  background-color: #003c3c;
+}
+
+.vitavia_zubehoergruppen_quermenu_element_slider_element_element:nth-child(3n+2) {
+  background-color: #005555;
+}
+
+.vitavia_zubehoergruppen_quermenu_element_slider_element_element:nth-child(3n+3) {
+  background-color: #006f6f;
+}
+
+.vitavia_zubehoergruppen_quermenu_element_slider_element_element:nth-child(3n+4) {
+  background-color: #008888;
+}
+
+.vitavia_zubehoergruppen_quermenu_element_slider_element_element:nth-child(3n+5) {
+  background-color: #00a2a2;
+}
+
 /*# sourceMappingURL=base.css.map */
